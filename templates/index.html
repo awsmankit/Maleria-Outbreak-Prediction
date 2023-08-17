@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Malaria Outbreak Prediction</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Malaria Outbreak Prediction</h1>
+        <form method="POST" action="/">
+            <input type="text" id="city_name" name="city_name" placeholder="Enter the city name" required>
+            <input type="number" id="positive" name="positive" step="0.01" placeholder="Positive" required>
+            <input type="number" id="pf" name="pf" step="0.01" placeholder="pf" required>
+            <input type="submit" value="Submit">
+        </form>
+        {% if prediction %}
+        <div class="result">
+            <h2>Result</h2>
+            <p>City: {{ city }}</p>
+            <p>Outbreak: {{ outbreak }}</p>
+        </div>
+        {% endif %}
+    </div>
+    <footer>
+        <p>&copy; AwsmAnkit 2023 Malaria Outbreak Prediction</p>
+    </footer>
+</body>
+</html>
